@@ -16,7 +16,7 @@
 1.  **Clone o Repositório**
     ```csharp 
     git clone https://github.com/rogermov/task-notification.git
-    cd https://github.com/rogermov/task-notification.git
+    cd task-notification
     ```
 2.  **Configuração do Banco de Dados**
     
