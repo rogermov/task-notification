@@ -23,11 +23,13 @@
     -   No arquivo `.env`, configure as variáveis de ambiente para o MySQL:
     
         ```csharp
-		DATABASE_HOST=localhost
-		DATABASE_PORT=3306
-        DATABASE_USER=roo
-        DATABASE_PASSWORD=alterar_senha
+		DATABASE_HOST=mysql
+        DATABASE_PORT=3306
+        DATABASE_USER=root
+        DATABASE_PASSWORD=sua_senha
         DATABASE_NAME=task_notifications
+        REDIS_HOST=redis
+        REDIS_PORT=6379
         ```
 3.  **Inicie o Contêiner**
     
