@@ -1,0 +1,19 @@
+USE task_notifications;
+
+CREATE TABLE IF NOT EXISTS task (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+DROP TRIGGER IF EXISTS before_task_insert;
+
+DELIMITER //
+CREATE TRIGGER before_task_insert
+BEFORE INSERT ON task
+FOR EACH ROW
+BEGIN
+  SET NEW.created_at = NOW();
+END;
+//
+DELIMITER ;
